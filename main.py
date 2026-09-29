@@ -1,6 +1,22 @@
+import pickle
 
-# with open("dienorastis.txt", 'a', encoding="UTF-8") as file:
-#     file.write("Antra eilutė\n")
+# studentai = [
+#     {
+#         "vardas": "Jonas",
+#         "pavarde": "Jonaitis",
+#         "kodas": 45786,
+#     },
+#     {
+#         "vardas": "Petras",
+#         "pavarde": "Petraitis",
+#         "kodas": 45987,
+#     },
+# ]
 #
-with open("dienorastis.txt", 'r', encoding="UTF-8") as file:
-    print(file.read())
+# with open('studentai.pkl', 'wb') as file:
+#     pickle.dump(studentai, file)
+
+with open("studentai.pkl", 'rb') as file:
+    masyvas = pickle.load(file)
+
+print(masyvas[0]['vardas'])
